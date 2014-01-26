@@ -1,0 +1,375 @@
+/**
+* Base stylesheet - Theme
+*/
+
+/*----------------------------------------------------------------------------------------------------------------*/
+/**
+* Typography
+*/
+
+@font-face{font-family: 'OpenSans-Light';src:url('../fonts/OpenSans-Light.ttf')}
+
+body {
+  color: #111;
+  font-size: 16px;
+  font-family: DepotNewWeb-Light,'OpenSans-Light',sans-serif,arial;;
+  font-weight: lighter;
+  line-height: 1.6;
+  background:url('../images/br-texture2.png');
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 ,.para{font-weight:lighter;padding:0.5%;margin:0px}
+.h1, .h2 { line-height: 1.1; }
+.h3, .h4 { line-height: 1.3; }
+.h1 { font-size: 350%; letter-spacing: -2px; font-family: MuseoSlab-300; text-shadow:0px 1px 1px #939393;}
+.h2 { font-size: 225%; letter-spacing: -1px; font-family: CamingoWeb-Regular; text-transform: uppercase;text-shadow:0px 1px 1px #939393;}
+.h3 { font-size: 170%; font-family: CamingoWeb-RegularItalic;text-shadow:0px 1px 1px #939393;}
+.h4 { font-size: 130%; font-family: AlwynNewRoundedWeb-Light;font-weight:bolder;text-shadow:0px 1px 0px #939393;}
+.h5 { font-size: 110%; font-family: DepotNewWeb-LightItalic;text-shadow:0px 1px 0px #444;}
+.h6 { font-size: 90%}
+
+.center{text-align:center;}
+.para{text-align:justify;text-justify:inter-word;}
+.para-start{font-size: 175%;font-weight: bolder;text-transform:uppercase;}
+.para-indent{text-indent:2%}
+.italic { font-style: italic; }
+.bold   { font-weight: 700; font-color: #222; }
+
+.block-margins { margin: 1em 0; }
+
+.unordered-list { list-style-type: disc; }
+.ordered-list { list-style: decimal; }
+
+.quotes,.thoughts{ font-family:AishaLatin-Regular;font-size:;}
+
+nav a{text-decoration:none;color:#111;width:100%;height:100%}
+nav ul,li{list-style-type:none;margin:0px;padding:0px}
+
+/*additional effects*/
+
+.stroke {
+ color: #eee; /* text color */
+ -webkit-text-stroke: 1px #000; /* stroke color and weight */
+}
+
+.stroke-transparent {
+ -webkit-text-stroke: 1px #000;
+ -webkit-text-fill-color: transparent;
+}
+
+.inset { text-shadow:#fff 0px 1px 0, #000 0 -1px 0;}
+
+/**
+* Transformations
+*/
+
+.rotated{
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);
+	/*opera missing*/
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+/**
+* PNG SUPPORT:
+*
+<!--[if lt IE 7]>
+<style>
+h1 span {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='gradient.png', sizingMethod='scale');
+}
+</style>
+<![endif]-->
+*/
+
+/**
+* Layout settings
+*/
+
+html,body{
+	height:100%;
+	width:100%;
+	margin:0px;
+	padding:0px;
+}
+
+.page-wrapper{
+	clear: both;
+	width: 80%;
+	font-size: 0.8125em;
+	max-width: 92.3em;
+	margin: 0 auto;
+	color: #333;
+	position: relative;
+}
+
+.header{
+	margin:0px;
+	height:150px;
+	background:url('../images/pattern-2s9m.png');
+	margin-bottom:25px;
+}
+
+a.iitgnaa-logo{
+	display:block;
+	height:inherit;
+	width:200px;
+	margin:auto;
+	background:url('../images/logo.png') no-repeat;
+	background-size:cover;
+}
+
+.social-media{
+	display:block;
+	position:absolute;
+	right:0px;
+	top:0px;
+	height:25px;
+	font-size:12px;
+}
+.social-media li{
+	display:block;
+	height:100%;
+	float:right;
+	margin:0px 3px;
+	line-height:25px;
+	color:#888
+}
+.media-item a{
+	width:25px;
+	display:block;
+	height:100%;
+}
+.facebook{
+	background:url('../images/f.png') no-repeat;background-size:cover
+}
+.twitter{
+	background:url('../images/t.png') no-repeat;background-size:cover
+}
+
+.navigation-menu{
+	position:relative;
+	top:10% !important;
+	background:rgba(140,170,230,0.9);
+	display:block;
+	box-shadow:0px 2px 4px #ddd;
+	margin:0px;
+	height:35px
+}
+.navigation-menu .page-wrapper{
+	height:100%
+} 
+.menu-list.col{
+	margin:0px;
+	height:100%;
+}
+.menu-item.col{
+	display:inline;
+	float:left;
+	font-size:140%;
+	text-align:center;
+	height:35px;
+	margin-bottom:0px;
+	margin-top:0px;
+	overflow:hidden;
+}
+.menu-item:hover{
+	box-shadow:0px 1px 6px #448;
+	border-radius:2px
+}
+.menu-item i{
+	color:#fff;
+}
+
+.menu-item a{
+	margin-left:10px;
+	color:#fff;
+	line-height:200%
+}
+
+.footer{
+	margin:0px;
+	background:url('../images/footer-texture.png');
+	clear:both;
+	border-top:4px solid rgba(145,175,230,1);
+	box-shadow:0px -1px 4px #bbb;
+	margin-top:25px;
+	overflow:hidden;
+}
+
+.link-box{
+	height:175px;
+	font-size:16px;
+}
+.link-box .h4{
+	color:rgba(145,175,230,1);
+	font-size:125%
+}
+.links-list{
+	margin:0px;
+	padding:0px
+}
+.links-list li{
+	text-indent:3px;
+}
+.links-list li a{
+	color:#000;
+	text-decoration:none;
+}
+.links-list li a:hover{
+	text-decoration:underline;
+}
+
+.footer-logo{
+	float:right;
+	text-align:center;
+	font-size:16px;
+	line-height:50px;
+	margin:30px 0px 25px 0px;
+}
+
+footer a.iitgnaa-logo{
+	position:relative;
+	top:0px;
+	margin:auto;
+	display:block;
+	height:60px;
+	width:150px;
+	background:url('../images/logo.png') no-repeat;
+	background-size:cover
+}
+
+.div-box{
+	box-shadow:0px 1px 5px #88b
+}
+
+.highlights-bar{
+	
+}
+.side-bar{
+	
+}
+
+.highlights-bar div,
+.side-bar div,
+.highlights-bar-two div,
+.side-bar-two div{
+	background:#fff
+}
+
+.highlights-bar-two{}
+.side-bar-two{}
+
+/*-------------------------------------------------------------------------------------*/
+.contact-address{
+	height:300px;
+	padding:15px
+}
+
+.contact-address .para{
+	font-size:18px
+}
+.map-location{
+	height:300px;
+	padding:15px
+}
+
+/*-------------------------------------------------------------------------------------*/
+.about-us{
+	padding:15px
+}
+.about-us .para{
+	font-size:125%
+}
+
+.side-menu{
+	font-size:120%
+}
+.side-menu nav{
+	padding:2% 5%
+}
+.side-menu nav .menu-list li{
+	padding:2px;
+	border-bottom:1px solid #eef
+}
+
+.side-menu nav .menu-list li a:hover{
+	color:rgba(140,180,230,1);
+}
+
+.about-us ul{
+	font-size:115%
+}
+ul.goals-list li{
+	list-style-type:square;
+}
+
+.exec-list li{
+	margin-bottom:20px;
+	border-bottom:1px solid #eef
+}
+.exec-list .fig{
+	width:120px;
+	height:150px;
+	box-shadow:0px 1px 4px #99c 
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1024px) and (min-width: 769px){
+.page-wrapper{
+	width: 93.75%;
+}
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 481px){
+.page-wrapper{
+	width: 93.75%;
+}
+
+.menu-item i{
+	display:none;
+}
+.highlights-bar.span_8_of_12 {
+		width: 100%;
+		margin:auto
+	}
+.side-bar.span_4_of_12 {
+		width: 100%;
+		margin:auto
+	}
+
+}
+/*--------------------------------------------------------------------------------*/
+@media only screen and (max-width: 480px){
+.h1{
+	font-size:250%
+}
+.page-wrapper{
+	width: 93.75%;
+}
+.header{
+	height:340px
+}
+.navigation-menu{
+	height:210px
+}
+.footer-logo{
+	margin:0px;
+	font-size:14px
+}
+footer a.iitgnaa-logo{
+	height:45px;
+	width:120px;
+}
+.link-box{
+	height:125px;
+	font-size:14px
+}
+.link-box .h4{
+	color:rgba(145,175,230,1);
+	font-size:115%
+}
+}

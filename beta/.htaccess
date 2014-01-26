@@ -1,0 +1,22 @@
+
+# html5 pushstate (history) support:
+
+<FILES css.css>
+  SetHandler  application/x-httpd-php
+</FILES>
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !index
+    RewriteRule ^([a-zA-Z0-9\-]+)$ $1.php
+    RewriteRule ^([a-zA-Z0-9\-]+)/$ $1.php?depth=../
+    RewriteRule ^([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+)$ $1.php?page=$2&depth=../
+    RewriteRule ^([a-zA-Z0-9\-]+)/([a-zA-Z0-9\-]+)/$ $1.php?page=$2&depth=../../
+    #RewriteRule (.*) index.php [L]
+</ifModule>
+
+#RewriteRule ^css/(.*)           /designs/version1/css/$1
+#RewriteRule ^graphics/(.*)      /designs/version1/graphics/$1
+#RewriteRule ^js/(.*)            /designs/version1/js/$1

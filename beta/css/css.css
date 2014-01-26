@@ -1,0 +1,15 @@
+<?php 
+//reference: http://davidwalsh.name/css-compression-php
+
+$css = '';
+$root = $_SERVER['DOCUMENT_ROOT'].'/css/'; //directory where the css lives
+$files = explode(',',$_SERVER['QUERY_STRING']);
+if(sizeof($files))
+{
+	foreach($files as $file)
+	{
+		$css.= (is_file($root.$file.'.css') ? file_get_contents($root.$file.'.css') : '');
+	}
+}
+return str_replace('; ',';',str_replace(' }','}',str_replace('{ ','{',str_replace(array("\r\n","\r","\n","\t",'  ','    ','    '),"",preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!','',$css)))));
+?>
